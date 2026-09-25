@@ -3,13 +3,13 @@
 JavaScript klijent (Node 18+ ili preglednik s `fetch`) za API servisa [Usklađenost cijena](https://uskladjenost-cijena.com): sidrene cijene i javni strojno čitljiv cjenik po NN 101/2026. Pokriva cijeli API i provjeru potpisa webhook isporuka, bez ovisnosti. Tipovi za TypeScript su uključeni.
 
 ```bash
-npm install @uskladjenost-cijena/sdk
+npm install uskladjenost-cijena
 ```
 
 ## Brzi početak
 
 ```js
-import { Client } from '@uskladjenost-cijena/sdk';
+import { Client } from 'uskladjenost-cijena';
 
 const api = new Client(process.env.PC_TOKEN);
 
@@ -56,7 +56,7 @@ Svaka metoda vraća `Promise` s dekodiranim JSON-om (`data`, `next_cursor`, `sum
 ## Webhookovi
 
 ```js
-import { webhookEvent } from '@uskladjenost-cijena/sdk';
+import { webhookEvent } from 'uskladjenost-cijena';
 
 // Express: app.post('/hook', express.raw({ type: '*/*' }), async (req, res) => { ... })
 const event = await webhookEvent(secret, req.headers, req.body); // baca ako potpis ne drži

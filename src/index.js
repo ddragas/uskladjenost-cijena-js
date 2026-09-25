@@ -1,7 +1,7 @@
 /**
  * The Usklađenost cijena API from JavaScript (Node 18+ or a browser with fetch).
  *
- *   import { Client } from '@uskladjenost-cijena/sdk';
+ *   import { Client } from 'uskladjenost-cijena';
  *   const api = new Client(process.env.PC_TOKEN);
  *   const item = await api.items.upsert('SKU-1', { merchant_id, kind: 'product', name: 'Deterdžent 3 kg' });
  *   await api.prices.recordByExternal('SKU-1', { regular_price_minor: 1250 }, { location_code: 'PU-01' });
