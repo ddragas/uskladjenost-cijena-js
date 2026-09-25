@@ -1,0 +1,16 @@
+{
+  "name": "@uskladjenost-cijena/sdk",
+  "version": "1.0.0",
+  "description": "JavaScript/TypeScript SDK for the Usklađenost cijena API (uskladjenost-cijena.com): anchor prices and public price lists under NN 101/2026.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" } },
+  "files": ["src"],
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "keywords": ["uskladjenost-cijena", "sidrena-cijena", "cjenik", "NN 101/2026", "price-compliance", "croatia"],
+  "author": "Info Media d.o.o. <support@info-media.it>",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/ddragas/uskladjenost-cijena-js" }
+}
