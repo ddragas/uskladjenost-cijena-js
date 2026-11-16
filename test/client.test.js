@@ -75,7 +75,7 @@ test('prices go in by offer or by the callers id', async () => {
 });
 
 test('compliance, publications, imports and webhooks', async () => {
-  answer(200, { data: { anchor_display: { label: 'Cijena na dan 10. 9. 2026.: 22,00 €' } } });
+  answer(200, { data: { anchor_display: { label: 'Bazna cijena na dan 10. 9. 2026.: 22,00 €' } } });
   assert.match((await api.compliance.byExternal('SKU-1', { location_code: 'PU-01', locale: 'hr' })).data.anchor_display.label, /22,00/);
   assert.equal(last().url, '/api/v1/compliance/by-external/SKU-1?location_code=PU-01&locale=hr');
 

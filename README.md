@@ -1,6 +1,6 @@
 # Usklađenost cijena – JavaScript / TypeScript SDK
 
-JavaScript klijent (Node 18+ ili preglednik s `fetch`) za API servisa [Usklađenost cijena](https://uskladjenost-cijena.com): sidrene cijene i javni strojno čitljiv cjenik po NN 101/2026. Pokriva cijeli API i provjeru potpisa webhook isporuka, bez ovisnosti. Tipovi za TypeScript su uključeni.
+JavaScript klijent (Node 18+ ili preglednik s `fetch`) za API servisa [Usklađenost cijena](https://uskladjenost-cijena.com): bazne cijene i javni strojno čitljiv cjenik po NN 132/2026. Pokriva cijeli API i provjeru potpisa webhook isporuka, bez ovisnosti. Tipovi za TypeScript su uključeni.
 
 ```bash
 npm install uskladjenost-cijena
@@ -21,7 +21,7 @@ await api.prices.recordByExternal('SKU-1', { regular_price_minor: 1250, effectiv
 
 // 3. Što ispisati uz cijenu (compliance:read)
 const { data } = await api.compliance.byExternal('SKU-1', { location_code: 'PU-01' });
-console.log(data.anchor_display.label); // "Cijena na dan 10. 9. 2026.: 12,50 €" ili null
+console.log(data.base_price.label); // "Bazna cijena na dan 10. 9. 2026.: 12,50 €" ili null
 ```
 
 ## Sve metode

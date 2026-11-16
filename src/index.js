@@ -6,7 +6,7 @@
  *   const item = await api.items.upsert('SKU-1', { merchant_id, kind: 'product', name: 'Deterdžent 3 kg' });
  *   await api.prices.recordByExternal('SKU-1', { regular_price_minor: 1250 }, { location_code: 'PU-01' });
  *   const { data } = await api.compliance.byExternal('SKU-1', { location_code: 'PU-01' });
- *   console.log(data.anchor_display.label);
+ *   console.log(data.base_price.label);
  *
  * Every method resolves to the decoded JSON body plus `_status`; every refusal
  * rejects with an ApiError carrying the API's code, the HTTP status and details.
