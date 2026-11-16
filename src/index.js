@@ -12,7 +12,7 @@
  * rejects with an ApiError carrying the API's code, the HTTP status and details.
  */
 
-export const VERSION = '1.0.0';
+export const VERSION = '1.1.0';
 
 export class ApiError extends Error {
   constructor(code, message, status, details = {}) {

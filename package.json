@@ -1,6 +1,6 @@
 {
   "name": "uskladjenost-cijena",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "JavaScript/TypeScript SDK for the Usklađenost cijena API (uskladjenost-cijena.com): base prices and public price lists under NN 132/2026.",
   "type": "module",
   "main": "./src/index.js",
